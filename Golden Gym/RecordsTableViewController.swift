@@ -53,8 +53,8 @@ class RecordsTableViewController: UIViewController, UITableViewDataSource, UITab
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell")
         let record = records[indexPath.row]
-        print("Record value \(String(describing: record.value(forKey: "sexo")))")
-        cell?.textLabel?.text="\(String(describing: record.value(forKey: "imc")))"
+        print("Record value \(String(describing: record.value(forKey: "peso")))")
+        cell?.textLabel?.text=record.value(forKeyPath: "sexo") as? String
         return cell!
     }
 
